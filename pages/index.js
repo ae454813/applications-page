@@ -1,6 +1,7 @@
 import { Button } from 'antd'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Button type='text' size='large'>Click Me To Go Applications Page</Button>
+        <Link passHref href="/allApps"><Button type='text' size='large'>Click Me To Go Applications Page</Button></Link>
       </main>
 
       <footer>

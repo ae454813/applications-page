@@ -19,6 +19,7 @@ export const ApplicationPageContainer = styled.div`
     }
 
     .app-page-description{
+        max-width: 635px;
         margin: 25px 0 10px;
         color: ${(props) => props.theme.colors.Gray2};
         line-height: 24px;
@@ -72,22 +73,3 @@ export const ReviewAppCard = styled.div`
     }
 `;
 
-export const AppFeatureContainer = styled.div`
-    
-    .feature-title{
-        margin-bottom: 24px;
-        font-size: 16px;
-        font-weight: 600;
-        color: ${(props) => props.theme.colors.black3};;
-    }
-
-    .feature-item{
-        color: ${(props) => props.theme.colors.Gray2};
-        list-style: none;
-    }
-
-    .star-icon{
-        font-size: 14px;
-        color: #FFC000;
-    }
-`
