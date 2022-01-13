@@ -1,11 +1,12 @@
 import { STATIC_DATA } from "../../locales/ar/appsPage";
 
 const ALL_APPS_DATA = {
-    appB7r: {
+    B7r: {
         id: 1,
         appLogo: "/static/appsPage/appB7r/logoB7R.png",
         appTitle: STATIC_DATA.mobileApp,
         appDescription: STATIC_DATA.sellWithYourMobile,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "B7R",
         features: [
@@ -22,11 +23,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/appB7r/Group 9190.png"}
         ]
     },
-    appFacebook: {
+    Facebook: {
         id: 2,
         appLogo: "/static/appsPage/facebook/Group 9047.png",
         appTitle: STATIC_DATA.facebook,
         appDescription: STATIC_DATA.buyProductsOnFacebook,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: STATIC_DATA.facebook,
         features: [
@@ -49,11 +51,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/facebook/Group 9127 (1).png"},
         ]
     },
-    appRatingAndReview: {
+    RatingAndReview: {
         id: 3,
         appLogo: "/static/appsPage/raitings&reviews/Frame 7572.png",
         appTitle: STATIC_DATA.ratingsAndReview,
         appDescription: STATIC_DATA.canRateAndReviewApp,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "B7R",
         features: [
@@ -69,11 +72,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/raitings&reviews/Group 9126 (1).png"},
         ]
     },
-    appPopup: {
+    Popup: {
         id: 4,
         appLogo: "/static/appsPage/popUp/Group 7771 (1).png",
         appTitle: STATIC_DATA.popUp,
         appDescription: STATIC_DATA.increaseYourSelling,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "B7R",
         features: [
@@ -97,11 +101,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/popUp/Group 9122 (1).png"},
         ]
     },
-    appKanwat: {
+    Kanwat: {
         id: 5,
         appLogo: "/static/appsPage/kanawat/Group 7771 (2).png",
         appTitle: STATIC_DATA.kanawat,
         appDescription: STATIC_DATA.getTurkishProducts,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "Knawat Inc.",
         features: [
@@ -123,11 +128,12 @@ const ALL_APPS_DATA = {
         imgUrl: []
         
     },
-    appSEO: {
+    SEO: {
         id: 6,
         appLogo: "/static/appsPage/SEO/Frame 7572 (1).png",
         appTitle: "SEO",
         appDescription: STATIC_DATA.improvePriorityWithSEO,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "B7R",
         paragraph: STATIC_DATA.makeYourWebsiteSupportSEO,
@@ -154,11 +160,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/SEO/Group 9183.png"},
         ]
     },
-    appSendstrap: {
+    Sendstrap: {
         id: 7,
         appLogo: "/static/appsPage/sendStrap/Frame 7572 (2).png",
         appTitle: "Sendstrap",
         appDescription: STATIC_DATA.connectWithYourCustomers,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "Sendstrap",
         features: [
@@ -178,11 +185,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/sendStrap/Group 9130.png"},
         ]
     },
-    appGameball: {
+    Gameball: {
         id: 8,
         appLogo: "/static/appsPage/gameBall/Group 9062.png",
         appTitle: "Gameball",
         appDescription: STATIC_DATA.managementRewards,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "Gameball",
         features: [
@@ -210,11 +218,12 @@ const ALL_APPS_DATA = {
             {src:"/static/appsPage/gameBall/Group 9165.png"},
         ]
     },
-    appMessage: {
+    Message: {
         id: 9,
         appLogo: "/static/appsPage/message/Group 9062 (1).png",
         appTitle: STATIC_DATA.message,
         appDescription: STATIC_DATA.communicateWithSMS,
+        isInstalled: true,
         LinkUrl: "https://www.b7r.store/",
         supplier: "B7R",
         featureTitle: STATIC_DATA.applicationFeaturs,

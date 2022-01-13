@@ -5,7 +5,7 @@ import ALL_APPS_DATA from '../../../components/applications Page/allAppsData'
 const RatingsAndReviewPage = () => {
     return (
         <div>
-            <AppPageComponent data={ALL_APPS_DATA.appRatingAndReview}/>
+            <AppPageComponent data={ALL_APPS_DATA.RatingAndReview}/>
         </div>
     )
 }

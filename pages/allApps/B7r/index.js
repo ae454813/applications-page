@@ -6,7 +6,7 @@ import ALL_APPS_DATA from '../../../components/applications Page/allAppsData'
 const AppB7rPage = () => {
     return (
         <div>
-            <AppPageComponent data={ALL_APPS_DATA.appB7r}/>
+            <AppPageComponent data={ALL_APPS_DATA.B7r}/>
         </div>
     )
 }

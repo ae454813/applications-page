@@ -7,7 +7,7 @@ import ALL_APPS_DATA from '../../../components/applications Page/allAppsData'
 const MessagePage = () => {
     return (
         <div>
-            <AppPageComponent data={ALL_APPS_DATA.appMessage}/>
+            <AppPageComponent data={ALL_APPS_DATA.Message}/>
         </div>
     )
 }

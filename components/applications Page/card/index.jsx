@@ -27,10 +27,14 @@ const ReviewAPPCardComponent = ({ data }) => {
             </a>
           </Text>
           <Space size={9} style={{ marginTop: "12px" }}>
-            <Button type="primary" className="btn-1">
-              {STATIC_DATA.appSettings}
-            </Button>
-            <Button className="btn-2">{STATIC_DATA.unInstallApp}</Button>
+            {data.isInstalled ? (
+              <>
+              <Button type="primary" className="btn-1">
+                {STATIC_DATA.appSettings}
+              </Button>
+              <Button className="btn-2">{STATIC_DATA.unInstallApp}</Button>
+              </>
+            ):(<Button type="primary" className="btn-1">{STATIC_DATA.installApp}</Button>)}
           </Space>
         </Space>
       </Space>
