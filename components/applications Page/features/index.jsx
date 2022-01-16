@@ -9,7 +9,7 @@ const { Text, Title, Paragraph } = Typography;
 const AppFeaturesComponent = ({ data }) => {
   return (
     <>
-      <Space direction="vertical" size={35}>
+      <Space direction="vertical" size={35} className="features-hint">
         <AppFeatureContainer>
           <Title className="feature-title">{data.featureTitle}</Title>
           <ul style={{ padding: "0" }}>

@@ -15,7 +15,7 @@ const { Text, Title, Paragraph } = Typography;
 
 const AppPageComponent = ({ data }) => {
   return (
-    <ApplicationPageContainer>
+    <ApplicationPageContainer data={data}>
       <Row gutter={[15, 15]}>
         <Col sm={24}>
           <Space className="go-back">
@@ -28,7 +28,7 @@ const AppPageComponent = ({ data }) => {
         <Col lg={24}>
           <ReviewAPPCardComponent data={data} />
         </Col>
-        <Col lg={24}>
+        <Col lg={24} className="paragraph-col">
           <Paragraph className="app-page-description">
             {data.paragraph}
           </Paragraph>

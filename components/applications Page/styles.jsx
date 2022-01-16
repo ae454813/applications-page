@@ -39,6 +39,14 @@ export const ApplicationPageContainer = styled.div`
     .images-grid{
         margin-top: 30px;
     }
+    .paragraph-col{
+        display: ${(props) => props.data.paragraph ? `unset` : `none` };
+    }
+    .features-hint{
+        @media (max-width: ${Breakpoints.sm}){
+           gap: 16px !important;
+        }
+    }
 `
 
 export const ReviewAppCard = styled.div`
