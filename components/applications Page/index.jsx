@@ -17,10 +17,10 @@ const AppPageComponent = ({ data }) => {
   return (
     <ApplicationPageContainer>
       <Row gutter={[15, 15]}>
-        <Col lg={24}>
+        <Col sm={24}>
           <Space className="go-back">
             <RightOutlined className="right-arrow" />
-            <Link href="/allApps">
+            <Link passHref href="/allApps">
               <Text className="go-apps">{STATIC_DATA.apps}</Text>
             </Link>
           </Space>
@@ -37,9 +37,10 @@ const AppPageComponent = ({ data }) => {
           <AppFeaturesComponent data={data} />
         </Col>
         <Col lg={24} className="images-grid">
-          <Row gutter={[32, 16]} justify="start">
+          <Row gutter={[32, 16]} justify="start" >
             {data.imgUrl.map((img, i) => (
-              <Image key={i} preview={false} src={img.src} />
+              <Col key={i}><Image preview={false} src={img.src} /></Col>
+              
             ))}
           </Row>
         </Col>

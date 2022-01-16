@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const HeaderComponent = () => {
     return (
         <HeaderContainer>
-            <Button size='large'>click me</Button>
+            
         </HeaderContainer>
     )
 }

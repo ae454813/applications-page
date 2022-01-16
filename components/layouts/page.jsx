@@ -18,7 +18,7 @@ const Page = ({ children }) => {
             <HeaderLayout />
           </Header>
           <Layout>
-            <Sider width={230}>
+            <Sider width={230} className="sider">
               <SiderComponent />
             </Sider>
             <Layout>

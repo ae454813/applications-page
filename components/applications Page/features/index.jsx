@@ -1,5 +1,5 @@
 import { StarFilled } from "@ant-design/icons/lib/icons";
-import { Image, Space, Typography } from "antd";
+import { Col, Image, Row, Space, Typography } from "antd";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
@@ -25,9 +25,12 @@ const AppFeaturesComponent = ({ data }) => {
         </AppFeatureContainer>
 
         {data.hint && (
+          
           <Space size={12} align="center">
             <Image preview={false} width={24} src="/static/appsPage/hint.png" />
-            <Text className="hint-description">
+            <Row gutter={[11,8]}>
+              <Col>
+              <Text className="hint-description">
               {data.hint}{" "}
               <a
                 target="_blank"
@@ -38,7 +41,9 @@ const AppFeaturesComponent = ({ data }) => {
                 {data.enrol}
               </a>
             </Text>
-            {data.id == 1 && (
+              </Col>
+              <Col>
+          {data.name == "B7r" && (
               <div>
                 <Link
                   href="https://play.google.com/store/apps/details?id=org.b7r.store"
@@ -62,7 +67,11 @@ const AppFeaturesComponent = ({ data }) => {
                 </Link>
               </div>
             )}
+              </Col>
+            </Row>
+            
           </Space>
+         
         )}
       </Space>
     </>
@@ -86,7 +95,7 @@ const AppFeatureContainer = styled.div`
   }
 
   .star-icon {
-    font-size: 14px;
+    font-size: 20px;
     color: #ffc000;
   }
 `;

@@ -2,28 +2,24 @@ import { Card, Col, Image, Input, Row, Space, Typography } from "antd";
 import Link from "next/link";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Breakpoints } from "../../../constants";
 import { STATIC_DATA } from "../../../locales/ar/appsPage";
 
 const { Title, Text } = Typography;
 const { Search } = Input;
 
 const AllAppsComponent = ({ data }) => {
-  Object.keys(data).map((t) => console.log(t));
-  // const appCard= Object.keys(data).reduce((prev, idx) => {
-  //   return [...prev, ...idx.appTitle, ...idx.appLogo]
-  // },[]);
+  const [filterApp, setFilterApp] = useState([...data]);
 
-  // console.log("app card", appCard)
-  // const [title, setTitle] = useState([])
-  // console.log(title)
-  //     for (const key in data) {
-  //         if (data.hasOwnProperty.call(data, key)) {
-  //             const title = data[key].appTitle;
-  //             setTitle(old=>[...old, title])
-  //             const logo = data[key].appLogo;
-  //             // setTitle(old=>[...old, logo])
-  //         }
-  //     }
+  const onSearchingApp = (value, event) => {
+    setFilterApp(
+      data.filter((app) =>
+        app.appTitle.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+    // if(value =="") return setFilterApp([...data])
+    // event.onChange();
+  };
 
   return (
     <AllAppsContainer>
@@ -33,31 +29,31 @@ const AllAppsComponent = ({ data }) => {
             {STATIC_DATA.allApps}
           </Title>
         </Col>
-        <Col lg={24}>
-          <Search placeholder={STATIC_DATA.searchForApp} size="large" />
+        <Col sm={24} xs={24}>
+          <Search
+            placeholder={STATIC_DATA.searchForApp}
+            onSearch={onSearchingApp}
+            size="large"
+          />
         </Col>
-        <Col lg={24}>
-          <Row gutter={[26, 24]}>
-            {Object.keys(data).map((app) => (
+        <Col xs={24}>
+          <Row gutter={[26, 24]} xs={24} >
+            {filterApp.map((app) => (
               <Col key={app}>
-                <Link href={`/allApps/${app}`}>
-                  <Card className="app-card" bodyStyle={{ padding: 20 }}>
+                <Link passHref href={`/allApps/${app.name}`}>
+                  <Card className="app-card" bodyStyle={{ padding: 0 }}>
                     <Space size={14} align="start">
-                      <Image
-                        preview={false}
-                        src={data.B7r.appLogo}
-                        width={58}
-                      />
+                      <Image preview={false} src={app.appLogo} alt={app.appTitle} width={58} />
                       <Space direction="vertical" size={32}>
                         <Typography>
                           <Title level={5} className="app-title">
-                            {data.B7r.appTitle}
+                            {app.appTitle}
                           </Title>
                           <Text className="app-description">
-                            {data.B7r.appDescription}
+                            {app.appDescription}
                           </Text>
                         </Typography>
-                        {data.B7r.isInstalled && (
+                        {app.isInstalled && (
                           <Text className="install-statue">
                             {STATIC_DATA.installed}
                           </Text>
@@ -79,17 +75,30 @@ export default AllAppsComponent;
 
 const AllAppsContainer = styled.div`
   padding: 15px 44px 15px 40px;
+  min-height: 150vh;
   background-color: #fbfbfb;
+  @media (max-width: ${Breakpoints.sm}){
+    padding: 16px;
+  }
 
   .page-title {
     margin-bottom: 11px;
+    @media (max-width: ${Breakpoints.sm}){
+      font-size: 18px;
+      margin-bottom: -15px;
+    }
   }
 
   .app-card {
-    width: 358px;
+    max-width: 358px;
     height: 176px;
+    padding: 20px;
     cursor: pointer;
     background-color: #ffffff;
+    @media (max-width: ${Breakpoints.sm}){
+      max-width: 343px;
+      padding: 20px 16px;
+    }
   }
 
   .app-title {
@@ -98,6 +107,9 @@ const AllAppsContainer = styled.div`
   }
   .app-description {
     color: ${(props) => props.theme.colors.Gray1};
+    @media (max-width: ${Breakpoints.sm}){
+      font-size: 12px;
+    }
   }
   .install-statue {
     min-width: 79px;
@@ -111,10 +123,18 @@ const AllAppsContainer = styled.div`
 
   .ant-input-group-wrapper {
     max-width: 392px;
-
     background: #ffffff;
     box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.12);
     border-radius: 6px;
+    @media (max-width: ${Breakpoints.sm}){
+        max-width: 343px;
+    }
+  }
+  .ant-input-lg {
+    padding: 8px 16px;
+    @media (max-width: ${Breakpoints.sm}){
+      font-size: 12px;
+    }
   }
   .ant-input-search
     > .ant-input-group
